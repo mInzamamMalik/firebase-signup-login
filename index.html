@@ -15,16 +15,8 @@
     <script src="views/signup/signup.js"></script>
     <script src="views/login/login.js"></script>
 </head>
-<body ng-app="myapp" ng-controller="appController">
-<ng-viewport></ng-viewport>
-<input type="text" ng-model="message.name"/>
-<input type="text" ng-model="message.text"/>
-<button ng-click="submit();" >submit</button>
+<body ng-app="myapp">
 
-<ul>
-    <li ng-repeat="message in data">{{ message.text }}</li>
-</ul>
-
-manual :  {{data[5].name}}
+<ui-view></ui-view>
 </body>
 </html>

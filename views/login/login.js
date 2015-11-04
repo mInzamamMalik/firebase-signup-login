@@ -3,15 +3,15 @@
  */
 angular.module("myapp")
 
-.controller("loginController",function($scope){
+    .controller("loginController", function ($scope, $firebaseArray) {
 
         $scope.name ="abc";
+        var ref = new Firebase("https://malikasinger-practiceapp.firebaseio.com/users");
 
         // create a synchronized array
-        $scope.data = $firebaseArray(ref);
+        $scope.userList = $firebaseArray(ref);
 
-        $scope.submit = function(){
-
+        $scope.dologin = function () {
             $scope.data.$add($scope.message);
 
         }

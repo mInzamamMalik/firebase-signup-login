@@ -3,14 +3,14 @@
  */
 
 
-angular.module("starter")
+angular.module("myapp")
 
 
 .service("dataSrevice",function(){
 
     var ref = new Firebase("https://malikasinger-practiceapp.firebaseio.com/");
 
-
+    this.userList = ref.child("users");
 
 });
 
